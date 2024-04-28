@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="445.0" prefWidth="705.0" style="-fx-background-color: #1d355s;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clientes.controlador.IndexControlador">
+   <children>
+      <Label layoutX="179.0" layoutY="57.0" prefHeight="35.0" prefWidth="312.0" text="    SISTEMA DE CIENTES" textFill="#f20808">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <TableView fx:id="clienteTabla" layoutX="322.0" layoutY="105.0" onMouseClicked="#cargarClienteFormulario" prefHeight="217.0" prefWidth="312.0">
+        <columns>
+          <TableColumn fx:id="idClienteColumna" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="nombreClienteColumna" prefWidth="75.0" text="NOMBRE" />
+            <TableColumn fx:id="domicilioClienteColumna" prefWidth="75.0" text="DOMICILIO" />
+            <TableColumn fx:id="telefonoClienteColumna" prefWidth="75.0" text="TELEFONO" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="45.0" layoutY="96.0" prefHeight="235.0" prefWidth="268.0">
+         <children>
+            <Label layoutX="29.0" layoutY="14.0" prefHeight="20.0" prefWidth="60.0" text="Nombre" textFill="#457b9d">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="90.0" prefHeight="20.0" prefWidth="66.0" text="Domicilio" textFill="#457b9d">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="164.0" prefHeight="18.0" prefWidth="60.0" text="Telefono" textFill="#457b9d">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNombre" layoutX="29.0" layoutY="42.0" prefHeight="35.0" prefWidth="232.0" />
+            <TextField fx:id="txtDomicilio" layoutX="29.0" layoutY="117.0" prefHeight="35.0" prefWidth="232.0" />
+            <TextField fx:id="txtTelefono" layoutX="29.0" layoutY="192.0" prefHeight="35.0" prefWidth="232.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="68.0" layoutY="343.0" prefHeight="88.0" prefWidth="564.0">
+         <children>
+            <Button fx:id="btnAgregar" layoutX="14.0" layoutY="32.0" mnemonicParsing="false" onAction="#agregarCliente" style="-fx-background-color: #338AFF;" text="Agregar" textFill="#f7f9f9">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnModificar" layoutX="152.0" layoutY="32.0" mnemonicParsing="false" onAction="#modificarCliente" style="-fx-background-color: #338AFF;" text="Modificar" textFill="#f7f9f9">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEliminar" layoutX="282.0" layoutY="32.0" mnemonicParsing="false" onAction="#eliminarCliente" style="-fx-background-color: #E74C3C;" text="Eliminar" textFill="#f7f9f9">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnLimpiar" layoutX="418.0" layoutY="32.0" mnemonicParsing="false" onAction="#limpiarFormulario" style="-fx-background-color: #338AFF;" text="Limpiar Formulario" textFill="#f7f9f9">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
